@@ -1,3 +1,4 @@
+import { generateCsvStr, createCsvFile } from './helpers'
 import { generateRow } from './helpers/generateNumbers'
 
 const totalRowsToGenerate = 2
@@ -7,3 +8,6 @@ for (let i = 0; i < totalRowsToGenerate; i++) {
   const row = generateRow()
   rows.push(row)
 }
+
+const csvStr = generateCsvStr(rows)
+createCsvFile(csvStr)
