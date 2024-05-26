@@ -2,7 +2,7 @@ import { generateCsvStr, createCsvFile } from './helpers'
 import { generateRow } from './helpers/generateNumbers'
 import colors from 'colors'
 
-const TOTAL_ROWS_TO_GENERATE = 6
+const TOTAL_ROWS_TO_GENERATE = 40000
 const SHOULD_CLASSES_BE_EQUAL = true
 const rows: Array<Array<Record<string, number>>> = []
 

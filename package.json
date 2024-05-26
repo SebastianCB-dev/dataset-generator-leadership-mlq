@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon src/index.ts",
-    "build": "npm run clean && format && tsc",
+    "build": "npm run clean && npm run format && tsc",
     "clean": "rimraf dist",
     "start": "npm run build && node dist/index.js",
     "format": "ts-standard --fix"
