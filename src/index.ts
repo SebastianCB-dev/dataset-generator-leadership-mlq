@@ -11,3 +11,5 @@ for (let i = 0; i < totalRowsToGenerate; i++) {
 
 const csvStr = generateCsvStr(rows)
 createCsvFile(csvStr)
+console.log('CSV file generated successfully!')
+console.log('Check the output directory for the generated CSV file.')

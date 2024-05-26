@@ -2,7 +2,14 @@ import { json2csv } from 'json-2-csv'
 import fs from 'node:fs'
 import path from 'node:path'
 
+/**
+ * Generates a CSV string from the given data object.
+ *
+ * @param data - The data object to convert to CSV.
+ * @returns The generated CSV string.
+ */
 export const generateCsvStr = (data: any): string => {
+  console.log('Generating CSV file...')
   return json2csv(data, {
     emptyFieldValue: '',
     expandArrayObjects: true,
@@ -20,6 +27,11 @@ export const createCsvFile = (data: any): void => {
   // Check if the directory exists, if not, create it
   if (!fs.existsSync(directory)) {
     fs.mkdirSync(directory, { recursive: true })
+  } else {
+    // delete dataset.csv if it exists
+    if (fs.existsSync(path.join(directory, 'dataset.csv'))) {
+      fs.unlinkSync(path.join(directory, 'dataset.csv'))
+    }
   }
 
   fs.writeFileSync(path.join(directory, 'dataset.csv'), data)
