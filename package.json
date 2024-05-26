@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon src/index.ts",
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && format && tsc",
     "clean": "rimraf dist",
-    "start": "npm run clean && tsc && node dist/index.js"
+    "start": "npm run build && node dist/index.js",
+    "format": "ts-standard --fix"
   },
   "keywords": [
     "mlq",
