@@ -1,5 +1,6 @@
 import { generateCsvStr, createCsvFile } from './helpers'
 import { generateRow } from './helpers/generateNumbers'
+import colors from 'colors'
 
 const totalRowsToGenerate = 2
 const rows: Array<Array<Record<string, number>>> = []
@@ -9,7 +10,12 @@ for (let i = 0; i < totalRowsToGenerate; i++) {
   rows.push(row)
 }
 
-const csvStr = generateCsvStr(rows)
-createCsvFile(csvStr)
-console.log('CSV file generated successfully!')
-console.log('Check the output directory for the generated CSV file.')
+try {
+  const csvStr = generateCsvStr(rows)
+  createCsvFile(csvStr)
+  console.log(colors.green.bold('CSV file generated successfully!'))
+  console.log(colors.blue('Check the output directory for the dataset.csv file.'))
+} catch (error) {
+  console.error(colors.red('An error occurred while generating the CSV file.'))
+  console.error(error)
+}

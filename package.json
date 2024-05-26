@@ -27,6 +27,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "colors": "^1.4.0",
     "json-2-csv": "^5.5.1",
     "ts-node": "^10.9.2"
   },

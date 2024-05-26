@@ -1,7 +1,7 @@
 import { json2csv } from 'json-2-csv'
 import fs from 'node:fs'
 import path from 'node:path'
-
+import colors from 'colors'
 /**
  * Generates a CSV string from the given data object.
  *
@@ -9,7 +9,7 @@ import path from 'node:path'
  * @returns The generated CSV string.
  */
 export const generateCsvStr = (data: any): string => {
-  console.log('Generating CSV file...')
+  console.log(colors.blue.bold('Generating CSV string...'))
   return json2csv(data, {
     emptyFieldValue: '',
     expandArrayObjects: true,
