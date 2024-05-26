@@ -1,0 +1,27 @@
+{
+  "name": "dataset-generator-leadership-mlq",
+  "version": "1.0.0",
+  "description": "This is a dataset generator for the leadership MLQ dataset",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "mlq",
+    "dataset",
+    "leadership",
+    "generator",
+    "csv"
+  ],
+  "author": "Joan Sebastián Carrillo Barón",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
