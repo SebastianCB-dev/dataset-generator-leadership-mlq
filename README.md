@@ -38,9 +38,13 @@ The dataset will be generated in the `output` folder.
 ## Output
 
 The dataset will be generated in the `output` folder. The dataset will be a CSV file with the following columns:
-["0. Question 1", "1. Question 2", ... "20. Question 21"]
+["0. Question 1", "1. Question 2", ... "20. Question 21", "Class"]
 
 The values of the columns will be a number between 0 and 4.
+The class column will be a number between 0 and 2 where:
+- 0: Low Leadership
+- 1: Medium Leadership
+- 2: High Leadership
 
 ## License
 MIT
