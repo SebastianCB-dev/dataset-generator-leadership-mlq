@@ -38,7 +38,7 @@ The dataset will be generated in the `output` folder.
 ## Output
 
 The dataset will be generated in the `output` folder. The dataset will be a CSV file with the following columns:
-["Question 1", "Question 2", ... "Question 21"]
+["0. Question 1", "1. Question 2", ... "20. Question 21"]
 
 The values of the columns will be a number between 0 and 4.
 
